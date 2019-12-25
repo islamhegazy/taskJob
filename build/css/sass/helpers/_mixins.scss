@@ -1,0 +1,45 @@
+//Prefixes mixins 
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+@mixin mainGradient {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#15243a), to(#2c5a80));
+    background-image: linear-gradient(to top, #15243a 0%, #2c5a80 100%);
+}
+
+@mixin subGradient {
+    background-image: -webkit-gradient(linear, right top, left top, from(#2c5a80), to( #15243a));
+    background-image: linear-gradient(to left, #2c5a80 0%, #15243a 100%);
+}
+
+@mixin boxShadow {
+    -webkit-box-shadow: 0 2px 10px -1px rgba(69, 90, 100, 0.3);
+    box-shadow: 0 2px 10px -1px rgba(69, 90, 100, 0.3);
+    -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
+    transition: -webkit-box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}

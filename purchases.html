@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> </title>
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="vendors/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Scrollbar Custom CSS -->
+    <link href="vendors/mCustomScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar" class="s1">
+            <div class="sidesup">
+                <a href="index.html" class="sidebar-header">
+                    <div class="logo">
+                        <img src="build/images/logo.png" class="img-responsive" />
+                    </div>
+                    <h3>HMIS</h3>
+                </a>
+                <div class="user-panel p-3 light mb-2">
+                    <div>
+                        <div class="float-left image">
+                            <img class="user_avatar" src="./build/images/icons/compumedical.svg" alt="User Image">
+                        </div>
+                        <div class="float-left info">
+                            <h4>CompuMedical</h4>
+                            <a href="#"><i class="fa fa-circle blink"></i> Online</a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled ulParent">
+                    <li>
+                        <a href="#">
+                            <i><img src="./build/images/icons/home.svg" alt="home"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#SystemData" data-toggle="collapse" aria-expanded="false">
+                            <i><img src="./build/images/icons/systemData.svg" alt="system Data"></i> System Data
+                        </a>
+                        <ul class="collapse list-unstyled" id="SystemData">
+                            <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                            <li>
+                                <a href="#SystemDataLe3" data-toggle="collapse" aria-expanded="false">Link 2</a>
+                                <ul class="collapse list-unstyled level3" id="SystemDataLe3">
+                                    <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                                    <li><a href="#" data-class="#" class="submeP">Link 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i><img src="./build/images/icons/patient.svg" alt="Patient data"></i> Patient Data
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#DoctorOrder" data-toggle="collapse" aria-expanded="false">
+                            <i><img src="./build/images/icons/doctor.svg" alt="Doctor's Order"></i> Doctor's Order
+                        </a>
+                        <ul class="collapse list-unstyled " id="DoctorOrder">
+                            <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#serviceRequest" data-toggle="collapse" aria-expanded="false">
+                            <i><img src="./build/images/icons/serviceRequest.svg" alt="Service Request"></i> Service Request
+                        </a>
+                        <ul class="collapse list-unstyled" id="serviceRequest">
+                            <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i><img src="./build/images/icons/admission.svg" alt="Admission"></i> Admission
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#serviceResult" data-toggle="collapse" aria-expanded="false">
+                            <i><img src="./build/images/icons/serviceResult.svg" alt="Service Result"></i>Service Result
+                        </a>
+                        <ul class="collapse list-unstyled" id="serviceResult">
+                            <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                            <li>
+                                <a href="#serviceRequestLe3" data-toggle="collapse" aria-expanded="false">Link 2</a>
+                                <ul class="collapse list-unstyled level3" id="serviceRequestLe3">
+                                    <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                                    <li><a href="#" data-class="#" class="submeP">Link 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#stores" data-toggle="collapse" aria-expanded="false">
+                            <i><img src="./build/images/icons/store.svg" alt="Stores"></i> Stores
+                        </a>
+                        <ul class="collapse list-unstyled" id="stores">
+                            <li><a href="#" data-class="purchases" class="submeP">Purchases</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#mortuary" data-toggle="collapse" aria-expanded="false">
+                            <i><img src="./build/images/icons/mortuary.svg" alt="Mortuary"></i> Mortuary
+                        </a>
+                        <ul class="collapse list-unstyled" id="mortuary">
+                            <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#accounts" data-toggle="collapse" aria-expanded="false">
+                            <i><img src="./build/images/icons/accounting.svg" alt="Accounts"></i> Accounts
+                        </a>
+                        <ul class="collapse list-unstyled" id="accounts">
+                            <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 2</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#reports" data-toggle="collapse" aria-expanded="false">
+                            <i><img src="./build/images/icons/reports.svg" alt="Reports"></i> Reports
+                        </a>
+                        <ul class="collapse list-unstyled" id="reports">
+                            <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 2</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#SystemSecurity" data-toggle="collapse" aria-expanded="false">
+                            <i><img src="./build/images/icons/shield.svg" alt="System Security"></i> System Security
+                        </a>
+                        <ul class="collapse list-unstyled" id="SystemSecurity">
+                            <li><a href="#" data-class="#" class="submeP">Link 1</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 2</a></li>
+                            <li><a href="#" data-class="#" class="submeP">Link 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end Sidebar Holder -->
+        <!-- Page Content Holder -->
+        <div id="content">
+            <div class="contentTop">
+                <div class="top_nav">
+                    <nav class="navbar navbar-default ">
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn navbar-btn">
+                        <i class="fa fa-bars"></i>
+                        </button>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="javascript:;" class="user-profile">
+                                        <div class="profile_pic">
+                                            <i class="fa fa-user-circle"></i>
+                                            <span>Dr.Hossam Elsmad</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <div class="">
+                                            <i class="fa fa-language"></i>
+                                            <select class="dropdown" style="border: 0px;">
+                                       <option selected="selected" value="en-US">English</option>
+                                       <option  value="ar-AE">Arabic</option>
+                                    </select>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="javascript:;" class=" info-number">
+                                        <i class="fa fa-bell"></i><span class="badge ">6</span>
+                                    </a>
+                                </li>
+                                <li><a href="login.html"><i class="fa fa-sign-out m-l-5 m-r-5"></i>Logout</a></li>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="con">
+                <div class="title">
+                    <div>
+                        <h4>
+                            <a href="index.html" class="breadcrumb-item">Purchases</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="subCon">
+                    <div class="white_box">
+                        <div class="box_title">
+                            <h4 class="">Purchases invoice</h4>
+                        </div>
+                        <div class="box_body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="nvoice_Serial">Invoice Serial</label>
+                                            <input type="text" class="form-control" id="nvoice_Serial">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Purchases_Date">Date</label>
+                                            <input type="text" class="form-control" id="Purchases_Date">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Purchases_Branch">Branch</label>
+                                            <input type="text" class="form-control" id="Purchases_Branch">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Purchases_Store">Store</label>
+                                            <input type="text" class="form-control" id="Purchases_Store">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Purchases_Supplier">Supplier</label>
+                                            <input type="text" class="form-control" id="Purchases_Supplier">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Order_Code">Order Code</label>
+                                            <input type="text" class="form-control" id="Order_Code">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Invoice_No">Invoice No</label>
+                                            <input type="text" class="form-control" id="Invoice_No">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Invoice_Date">Invoice Date</label>
+                                            <input type="date" class="form-control" id="Invoice_Date">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Invoice_Type">Invoice Type</label>
+                                            <input type="text" class="form-control" id="Invoice_Type">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Invoice_Pricing">Invoice Pricing</label>
+                                            <div class="form-inline">
+                                                <div class="radio mb-3"><label class="radio-label mr-4"><input name="sample" type="radio" checked="checked">Sales price and Discount <i class="input-frame"></i></label></div>
+                                                <div class="radio mb-3"><label class="radio-label"><input name="sample" type="radio">Sales price and const <i class="input-frame"></i></label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="Purchases_Note">Note </label>
+                                            <textarea class="form-control" id="Purchases_Note" cols="2" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <button class="icon-btn add-btn">
+                                            <div class="add-icon"></div>
+                                            <div class="btn-txt">Add</div>
+                                          </button>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="table-responsive">
+                                            <table id="t1" class="table table-striped table-bordered" style="min-height: 150px;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Product Code</th>
+                                                        <th>Product Name</th>
+                                                        <th>Unit NameFL</th>
+                                                        <th>Sale Price</th>
+                                                        <th>Cost Price</th>
+                                                        <th>Discount</th>
+                                                        <th>Discount %</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="no-records-found">
+                                                        <td colspan="12">No data</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="text-center">
+                    2019 @جميع الحقوق محفوظة لدى <a class="text-green ml-2" href="http://www.ebtkaraat.com/" target="_blank">Ebtkarat </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="to-top"><i class="glyphicon glyphicon-chevron-up"></i></div>
+    <!-- jQuery CDN -->
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="vendors/dataTables/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/dataTables/js/dataTables.bootstrap.min.js"></script>
+    <!-- nicescroll -->
+    <script src="vendors/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.js"></script>
+</body>
