@@ -203,39 +203,6 @@ body .body .right_col {
     }
 }
 
-.user-panel {
-    overflow: hidden;
-    padding: 15px;
-    .p-3 {
-        padding: 1rem!important;
-    }
-    .mb-2,
-    .my-2 {
-        margin-bottom: .5rem!important;
-    }
-    .user_avatar {
-        margin-right: 10px;
-        width: 50px;
-        border: 2px solid $blueColor;
-        background: $whiteColor;
-        padding: 5px;
-        border-radius: 50%;
-    }
-    .info {
-        a {
-            color: $whiteColor;
-        }
-        i {
-            color: $greenColor;
-            margin: 0px 5px 0 0;
-        }
-    }
-}
-
-.float-left {
-    float: $fleft!important;
-}
-
 .blink {
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
@@ -297,6 +264,9 @@ body .body .right_col {
         label {
             display: block;
             padding-left: 15px;
+            @media #{$mobile} {
+                padding-left: 30px;
+            }
             input {
                 position: absolute;
                 margin-left: -20px;
@@ -373,4 +343,68 @@ input[type=checkbox],
 input[type=radio] {
     box-sizing: border-box;
     padding: 0;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.has-search {
+    .fa-search {
+        position: absolute;
+        right: 13px;
+        color: #999;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .form-control {
+        padding-left: 12px;
+        padding-right: 34px;
+    }
+}
+
+.has-search {
+    position: relative;
+    .fa-search {
+        position: absolute;
+        right: 13px;
+        color: #999;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 1px solid rgba(0, 0, 0, .1);
+        padding-left: 9px;
+        z-index: 1111;
+    }
+    .form-control {
+        padding-left: 12px;
+        padding-right: 34px;
+    }
+}
+
+.double-input {
+    width: 100%;
+    display: flex;
+    .in1 {
+        width: 30%;
+        .form-control {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    .in2 {
+        .form-control {
+            border-left: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+    .has-search {
+        width: 70%;
+    }
+    .form-control {
+        display: inline-block;
+        &:focus {
+            border-right-width: 1px;
+        }
+    }
 }

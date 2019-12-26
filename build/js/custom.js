@@ -66,6 +66,7 @@ $(document).ready(function() {
         );
     });
 
+    /************** sidebar scroll **************/
     $("#sidebar").mCustomScrollbar({
         scrollInertia: 100,
         autoHideScrollbar: true,
@@ -74,6 +75,25 @@ $(document).ready(function() {
             updateOnContentResize: true
         }
     });
-    $('#t1').DataTable();
+    $("body").niceScroll({
+        cursorcolor: "#3095e4",
+        cursorwidth: "9px",
+        background: "linear-gradient(to top, #15243a 0%, #2c5a80 100%)",
+        cursorborder: "1px solid #3095e4",
+    });
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+    var today = yyyy + '/' + mm + '/' + dd;
+    $('#Purchases_Date,#Invoice_Date').val(today);
+
 
 });

@@ -10,7 +10,6 @@
     <title> </title>
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
     <link href="vendors/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -33,10 +32,10 @@
                 </a>
                 <div class="user-panel p-3 light mb-2">
                     <div>
-                        <div class="float-left image">
+                        <div class="image">
                             <img class="user_avatar" src="./build/images/icons/compumedical.svg" alt="User Image">
                         </div>
-                        <div class="float-left info">
+                        <div class="info">
                             <h4>CompuMedical</h4>
                             <a href="#"><i class="fa fa-circle blink"></i> Online</a>
                         </div>
@@ -218,58 +217,81 @@
                         <div class="box_body">
                             <form>
                                 <div class="row">
-                                    <div class="col-md-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="form-group">
                                             <label for="nvoice_Serial">Invoice Serial</label>
-                                            <input type="text" class="form-control" id="nvoice_Serial">
+                                            <input type="text" class="form-control text-center" id="nvoice_Serial" value="PI:28">
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="form-group">
                                             <label for="Purchases_Date">Date</label>
-                                            <input type="text" class="form-control" id="Purchases_Date">
+                                            <input type="text" class="form-control text-center" id="Purchases_Date">
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="form-group">
-                                            <label for="Purchases_Branch">Branch</label>
-                                            <input type="text" class="form-control" id="Purchases_Branch">
+                                            <label> Branch</label>
+                                            <select class="selectpicker">
+                                                <option selected="selected" disabled hidden>Select Branch</option>
+                                                <option value="Branch 1">Branch 1</option>
+                                                <option value="Branch 2">Branch 2</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="form-group">
-                                            <label for="Purchases_Store">Store</label>
-                                            <input type="text" class="form-control" id="Purchases_Store">
+                                            <label> Store</label>
+                                            <select class="selectpicker">
+                                                <option selected="selected" disabled hidden>Select Store</option>
+                                                <option value="Store 1">Store 1</option>
+                                                <option value="Store 2">Store 2</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="form-group">
                                             <label for="Purchases_Supplier">Supplier</label>
-                                            <input type="text" class="form-control" id="Purchases_Supplier">
+                                            <div class=" double-input">
+                                                <div class="in1">
+                                                    <input type="number" value="0" class="form-control text-center " />
+                                                </div>
+                                                <div class="has-search in2">
+                                                    <span class="fa fa-search"></span>
+                                                    <input type="text" class="form-control ">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <label for="Order_Code">Order Code</label>
                                         <div class="form-group">
-                                            <label for="Order_Code">Order Code</label>
-                                            <input type="text" class="form-control" id="Order_Code">
+                                            <div class="has-search">
+                                                <span class="fa fa-search "></span>
+                                                <input type="text" class="form-control">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="form-group">
                                             <label for="Invoice_No">Invoice No</label>
                                             <input type="text" class="form-control" id="Invoice_No">
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="form-group">
                                             <label for="Invoice_Date">Invoice Date</label>
-                                            <input type="date" class="form-control" id="Invoice_Date">
+                                            <input type="text" class="form-control text-center" id="Invoice_Date">
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="form-group">
-                                            <label for="Invoice_Type">Invoice Type</label>
-                                            <input type="text" class="form-control" id="Invoice_Type">
+                                            <label> Invoice Type</label>
+                                            <select class="selectpicker">
+                                                <option  disabled hidden>Select Invoice Type</option>
+                                                <option selected="selected" value="Cash">Cash</option selected="selected">
+                                                <option value="Standard">Standard</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-xs-12">
@@ -277,7 +299,7 @@
                                             <label for="Invoice_Pricing">Invoice Pricing</label>
                                             <div class="form-inline">
                                                 <div class="radio mb-3"><label class="radio-label mr-4"><input name="sample" type="radio" checked="checked">Sales price and Discount <i class="input-frame"></i></label></div>
-                                                <div class="radio mb-3"><label class="radio-label"><input name="sample" type="radio">Sales price and const <i class="input-frame"></i></label></div>
+                                                <div class="radio mb-3"><label class="radio-label"><input name="sample" type="radio">Sales price and cost <i class="input-frame"></i></label></div>
                                             </div>
                                         </div>
                                     </div>
@@ -292,7 +314,7 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <button class="icon-btn add-btn">
+                                        <button type="button" class="icon-btn add-btn">
                                             <div class="add-icon"></div>
                                             <div class="btn-txt">Add</div>
                                           </button>
@@ -320,7 +342,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <button type="submit" class="btn-grad"><i class="fa fa-file"></i>New</button>
+                                        <button type="button" class="btn-grad grad-blue"><i class="fa fa-search"></i>Search</button>
+                                        <button type="button" class="btn-grad grad-green"><i class="fa fa-floppy-o"></i>Save</button>
+                                        <button type="button" class="btn-grad grad-red"><i class="fa fa-times"></i>Cancel</button>
+                                        <button type="button" class="btn-grad grad-purble"><i class="fa fa-print"></i>Print</button>
+                                    </div>
+                                </div>
                             </form>
 
                         </div>
@@ -341,12 +371,12 @@
     <!-- Bootstrap -->
     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="vendors/bootstrap-select/bootstrap-select.min.js"></script>
-    <script src="vendors/dataTables/js/jquery.dataTables.min.js"></script>
-    <script src="vendors/dataTables/js/dataTables.bootstrap.min.js"></script>
     <!-- nicescroll -->
     <script src="vendors/jquery.nicescroll/jquery.nicescroll.min.js"></script>
     <!-- jQuery Custom Scroller CDN -->
     <script src="vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- nicescroll -->
+    <script src="vendors/jquery.nicescroll/jquery.nicescroll.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="build/js/custom.js"></script>
 </body>

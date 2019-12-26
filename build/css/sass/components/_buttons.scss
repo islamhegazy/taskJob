@@ -1,6 +1,6 @@
 .top_nav .navbar-header .btn {
     background-color: $blueColor;
-    color: #ffffff;
+    color: $whiteColor;
     font-size: 20px;
     padding: 0 10px;
     margin: 0 10px;
@@ -16,17 +16,19 @@
     width: 50px;
     height: 50px;
     border: 1px solid #cdcdcd;
-    background: white;
+    background: $whiteColor;
     border-radius: 25px;
     margin: 5px;
     overflow: hidden;
     position: relative;
     @include boxShadow;
+    -webkit-transition: width 0.2s ease-in-out;
     transition: width 0.2s ease-in-out;
     &:focus {
         outline: none;
     }
     &:hover {
+        -webkit-box-shadow: none;
         box-shadow: none;
     }
 }
@@ -38,6 +40,7 @@
     }
     &:before,
     &:after {
+        -webkit-transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
         transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
         content: "";
         position: absolute;
@@ -61,6 +64,7 @@
 
 .btn-txt {
     opacity: 0;
+    -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
 }
 
@@ -74,19 +78,19 @@
     opacity: 1;
 }
 
-.add-icon::after,
-.add-icon::before {
-    transition: all 0.2s ease-in-out;
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 2px;
-    top: calc(50% - 10px);
-    background: $greenColor;
-    overflow: hidden;
-}
-
 .add-icon {
+    &:after,
+    &:before {
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 2px;
+        top: calc(50% - 10px);
+        background: $greenColor;
+        overflow: hidden;
+    }
     &:before {
         left: 22px;
         border-top-left-radius: 2px;
@@ -109,4 +113,55 @@
     right: 15px;
     height: 4px;
     top: calc(50% - 2px);
+}
+
+.btn-grad {
+    background-image: -webkit-gradient(linear, left top, right top, from(#2176b3), color-stop(51%, #3095e4), to(#1FA2FF));
+    background-image: linear-gradient(to right, #2176b3 0%, #3095e4 51%, #1FA2FF 100%);
+    padding: 6px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background-size: 200% auto;
+    color: white;
+    -webkit-box-shadow: 0 0px 8px 3px rgba(34, 34, 34, 0.42);
+    box-shadow: 0 0px 8px 3px rgba(34, 34, 34, 0.42);
+    border-radius: 10px;
+    display: inline-block;
+    border: 1px solid #fff;
+    margin: auto;
+    .fa {
+        margin-right: 10px;
+    }
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.grad-green {
+    background-image: -webkit-gradient(linear, left top, right top, from(#1D976C), color-stop(51%, #1f8a47), to(#12583f));
+    background-image: linear-gradient(to right, #1D976C 0%, #1f8a47 51%, #12583f 100%);
+}
+
+.grad-blue {
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff5b26), color-stop(51%, #ec5e30), to(#ca3f12));
+    background-image: linear-gradient(to right, #ff5b26 0%, #ec5e30 51%, #ca3f12 100%);
+}
+
+.center_btn {
+    margin: 30px auto 0 auto;
+}
+
+.grad-red {
+    background-image: -webkit-gradient(linear, left top, right top, from(#e52d27), color-stop(51%, #b31217), to(#e52d27));
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%)
+}
+
+.grad-purble {
+    background-image: -webkit-gradient(linear, left top, right top, from(#6827d0), color-stop(51%, #461e90), to(#6034b8));
+    background-image: linear-gradient(to right, #6827d0 0%, #461e90 51%, #6034b8 100%);
 }
