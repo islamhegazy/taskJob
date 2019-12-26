@@ -2,15 +2,15 @@ footer {
     @include subGradient;
     padding: 10px 0px;
     display: block;
-    color: #ffffff;
+    color: $whiteColor;
     @media #{$mobile} {
         width: 100%;
     }
     a {
-        color: #fff;
+        color: $whiteColor;
         font-weight: 600;
         &:hover {
-            color: #3095e4
+            color: $blueColor
         }
     }
 }

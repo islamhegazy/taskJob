@@ -43,7 +43,7 @@ body {
     margin: 0 0 0 250px;
     position: relative;
     background-color: #f3f3f4;
-    @media (max-width: 767px) {
+    @media #{$mobile} {
         margin: 0px
     }
 }
@@ -52,7 +52,7 @@ body {
     margin: 0 0 0 80px;
 }
 
-@media (max-width: 767px) {
+@media #{$mobile} {
     #content {
         margin: 0px
     }
@@ -192,7 +192,7 @@ body .body .right_col {
         padding-top: 5px;
         padding-bottom: 5px;
         line-height: 25px;
-        @media (max-width: 767px) {
+        @media #{$mobile} {
             font-size: 16px;
             font-weight: 600;
         }

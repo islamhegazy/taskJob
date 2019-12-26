@@ -1,3 +1,5 @@
+@import url(../../../../vendors/bootstrap/dist/css/bootstrap.min.css);
+@import url(../../../../vendors/bootstrap-select/bootstrap-select.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap");
 a,
 a:visited,
@@ -412,14 +414,22 @@ input[type=radio] {
         cursor: pointer; }
     #sidebar .sidebar-header:hover {
       cursor: pointer; }
-    #sidebar .sidebar-header .logo img {
-      width: 60px;
-      height: 60px;
+    #sidebar .sidebar-header .logo {
+      width: 85%;
       margin: auto;
-      margin-bottom: 13px; }
+      background: #ffffff;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      padding: 0 5px;
+      margin-bottom: 15px; }
+    #sidebar .sidebar-header .sidebar_title h3 {
+      font-weight: 700; }
   #sidebar .user-panel {
     overflow: hidden;
-    padding: 15px; }
+    padding: 15px 0 5px; }
     #sidebar .user-panel .p-3 {
       padding: 1rem !important; }
     #sidebar .user-panel .mb-2,
@@ -452,8 +462,6 @@ input[type=radio] {
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out; }
-    #sidebar ul.ulParent li a:hover {
-      background-color: rgba(0, 0, 0, 0.2); }
     #sidebar ul.ulParent li a i {
       margin-right: 10px;
       display: inline-block;
@@ -464,6 +472,9 @@ input[type=radio] {
       #sidebar ul.ulParent li a i img {
         width: 25px;
         height: 25px; }
+  #sidebar ul.ulParent li a:hover,
+  #sidebar ul.ulParent li a.active {
+    background-color: rgba(0, 0, 0, 0.2); }
   #sidebar ul.ulParent > li > a {
     color: #fff;
     -webkit-box-shadow: 0 0px 9px 0px rgba(0, 0, 0, 0.49);
@@ -471,27 +482,27 @@ input[type=radio] {
     text-decoration: none; }
     #sidebar ul.ulParent > li > a .active {
       background-color: rgba(0, 0, 0, 0.2); }
-
-#sidebar ul > li > ul {
-  border-left: 4px solid #4d8af0;
-  background: #293846; }
+  #sidebar ul > li > ul {
+    border-left: 4px solid #4d8af0;
+    background: #293846; }
+  #sidebar ul > li > .level3 {
+    border: none;
+    background: #1d2833; }
+    #sidebar ul > li > .level3 a {
+      padding-left: 20px; }
+  #sidebar li {
+    margin: 10px 0; }
+    #sidebar li .list-unstyled li {
+      margin: 0; }
+      #sidebar li .list-unstyled li a:hover,
+      #sidebar li .list-unstyled li .clicked_link {
+        color: #fff !important;
+        background: #4d8af0; }
+  #sidebar a[data-toggle="collapse"] {
+    position: relative; }
 
 .submeP {
   padding-right: 30px !important; }
-
-#sidebar li .list-unstyled li a:hover,
-.clicked_link {
-  color: #fff !important;
-  background: #4d8af0; }
-
-#sidebar li .list-unstyled li {
-  margin: 0; }
-
-#sidebar li {
-  margin: 10px 0; }
-
-#sidebar a[data-toggle="collapse"] {
-  position: relative; }
 
 #sidebar a[aria-expanded="false"]::before,
 #sidebar a[aria-expanded="true"]::before {
@@ -503,10 +514,6 @@ input[type=radio] {
   font-family: 'Glyphicons Halflings';
   font-size: 0.6em; }
 
-#sidebar #sidebar ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important; }
-
 #sidebar.active {
   width: 80px;
   text-align: center; }
@@ -515,6 +522,8 @@ input[type=radio] {
       display: block; } }
   #sidebar.active .sidebar-header h3 {
     font-size: 14px; }
+  #sidebar.active .sidebar-header .logo {
+    display: none; }
   #sidebar.active .user-panel .image {
     float: unset; }
   #sidebar.active .user-panel .info {
@@ -523,6 +532,8 @@ input[type=radio] {
       font-size: 13px;
       word-break: break-all;
       line-height: 1.7; }
+    #sidebar.active .user-panel .info span {
+      display: block; }
   #sidebar.active ul.ulParent {
     padding-top: 10px; }
   #sidebar.active ul li a {
@@ -543,7 +554,7 @@ input[type=radio] {
     transform: translateX(50%); }
 
 /* ---------------------------------------------------
-    MEDIAQUERIES
+    top_nav
 ----------------------------------------------------- */
 .top_nav .navbar-header {
   float: left;
@@ -559,19 +570,8 @@ input[type=radio] {
     font-size: 30px;
     margin: 0 5px;
     color: #4d8af0; }
-.top_nav .navbar-nav .open .dropdown-menu.msg_list {
-  width: 300px; }
-.top_nav .navbar-nav .open .dropdown-menu {
-  position: absolute;
-  background: #fff;
-  margin-top: 0;
-  border: 1px solid #D9DEE4;
-  left: 0;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.29);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.29);
-  min-width: 220px;
-  padding: 5px;
-  margin-top: 2px; }
+.top_nav .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: auto; }
 .top_nav ul.msg_list li {
   background: #f7f7f7;
   padding: 5px;
@@ -664,6 +664,7 @@ input[type=radio] {
   .top_nav .navbar-header .btn:hover {
     background-color: #4d8af0; }
 
+/* btn for add table*/
 .icon-btn {
   width: 50px;
   height: 50px;
@@ -758,8 +759,8 @@ input[type=radio] {
   padding: 6px 25px;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background-size: 200% auto;
   color: white;
   -webkit-box-shadow: 0 0px 8px 3px rgba(34, 34, 34, 0.42);
@@ -805,10 +806,10 @@ footer {
     footer {
       width: 100%; } }
   footer a {
-    color: #fff;
+    color: #ffffff;
     font-weight: 600; }
     footer a:hover {
-      color: #3095e4; }
+      color: #4d8af0; }
 
 .nav-sm footer {
   margin-right: 70px; }

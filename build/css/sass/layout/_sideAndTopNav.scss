@@ -50,17 +50,26 @@
             cursor: pointer;
         }
         .logo {
-            img {
-                width: 60px;
-                height: 60px;
-                margin: auto;
-                margin-bottom: 13px;
+            width: 85%;
+            margin: auto;
+            background: #ffffff;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
+            padding: 0 5px;
+            margin-bottom: 15px;
+        }
+        .sidebar_title {
+            h3 {
+                font-weight: 700;
             }
         }
     }
     .user-panel {
         overflow: hidden;
-        padding: 15px;
+        padding: 15px 0 5px;
         .p-3 {
             padding: 1rem!important;
         }
@@ -103,9 +112,6 @@
                 -moz-transition: all 0.3s ease-in-out;
                 -ms-transition: all 0.3s ease-in-out;
                 -o-transition: all 0.3s ease-in-out;
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.2);
-                }
                 i {
                     margin-right: 10px;
                     display: inline-block;
@@ -119,6 +125,10 @@
                     }
                 }
             }
+            a:hover,
+            a.active {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
         }
     }
     ul.ulParent>li>a {
@@ -130,33 +140,35 @@
             background-color: rgba(0, 0, 0, 0.2);
         }
     }
-}
-
-#sidebar ul>li>ul {
-    border-left: 4px solid $blueColor;
-    background: #293846;
+    ul>li>ul {
+        border-left: 4px solid $blueColor;
+        background: #293846;
+    }
+    ul>li>.level3 {
+        border: none;
+        background: #1d2833;
+        a {
+            padding-left: 20px;
+        }
+    }
+    li {
+        margin: 10px 0;
+        .list-unstyled li {
+            margin: 0;
+            a:hover,
+            .clicked_link {
+                color: #fff !important;
+                background: $blueColor;
+            }
+        }
+    }
+    a[data-toggle="collapse"] {
+        position: relative;
+    }
 }
 
 .submeP {
     padding-right: 30px !important;
-}
-
-#sidebar li .list-unstyled li a:hover,
-.clicked_link {
-    color: #fff !important;
-    background: $blueColor;
-}
-
-#sidebar li .list-unstyled li {
-    margin: 0
-}
-
-#sidebar li {
-    margin: 10px 0;
-}
-
-#sidebar a[data-toggle="collapse"] {
-    position: relative;
 }
 
 #sidebar a[aria-expanded="false"]::before,
@@ -170,11 +182,6 @@
     font-size: 0.6em;
 }
 
-#sidebar #sidebar ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-}
-
 #sidebar.active {
     width: 80px;
     text-align: center;
@@ -184,6 +191,9 @@
     .sidebar-header {
         h3 {
             font-size: 14px;
+        }
+        .logo {
+            display: none;
         }
     }
     .user-panel {
@@ -196,6 +206,9 @@
                 font-size: 13px;
                 word-break: break-all;
                 line-height: 1.7;
+            }
+            span {
+                display: block;
             }
         }
     }
@@ -227,7 +240,7 @@
 
 
 /* ---------------------------------------------------
-    MEDIAQUERIES
+    top_nav
 ----------------------------------------------------- */
 
 .top_nav {
@@ -248,20 +261,8 @@
             color: $blueColor;
         }
     }
-    .navbar-nav .open .dropdown-menu.msg_list {
-        width: 300px;
-    }
-    .navbar-nav .open .dropdown-menu {
-        position: absolute;
-        background: #fff;
-        margin-top: 0;
-        border: 1px solid #D9DEE4;
-        left: 0;
-        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.29);
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.29);
-        min-width: 220px;
-        padding: 5px;
-        margin-top: 2px;
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+        width: auto;
     }
     ul.msg_list li {
         background: #f7f7f7;
@@ -331,7 +332,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media #{$mobile} {
     #content.active .top_nav .navbar-left {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
